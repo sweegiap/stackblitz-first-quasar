@@ -32,51 +32,53 @@
         "
       >
         <q-list padding>
-          <q-item clickable v-ripple>
-            <q-item-section avatar>
-              <q-icon name="inbox" />
-            </q-item-section>
+          <q-item to="/" exact clickable v-ripple>
+            <q-item-section avatar> <q-icon name="list" /> </q-item-section>
 
-            <q-item-section> Inbox </q-item-section>
+            <q-item-section> Todo </q-item-section>
           </q-item>
 
-          <q-item clickable v-ripple>
+          <q-item to="/help" exact clickable v-ripple>
             <q-item-section avatar>
-              <q-icon name="drafts" />
+              <q-icon name="help" />
             </q-item-section>
 
-            <q-item-section> Drafts </q-item-section>
+            <q-item-section> Help </q-item-section>
           </q-item>
         </q-list>
       </q-scroll-area>
 
       <q-img
         class="absolute-top"
-        src="https://cdn.quasar.dev/img/material.png"
+        src="~/assets/money.jpg"
         style="height: 150px"
       >
-        <div class="absolute-bottom bg-transparent">
+        <div class="absolute-bottom bg-transparent text-dark">
           <q-avatar size="56px" class="q-mb-sm">
-            <img src="https://cdn.quasar.dev/img/boy-avatar.png" />
+            <img
+              src="https://avatars.githubusercontent.com/u/44151951?s=96&v=4"
+            />
           </q-avatar>
-          <div class="text-weight-bold">Razvan Stoenescu</div>
-          <div>@rstoenescu</div>
+          <div class="text-weight-bold">Swee Giap</div>
+          <div>@sweegiap</div>
         </div>
       </q-img>
     </q-drawer>
 
     <q-page-container>
-      <router-view />
+      <keep-alive>
+        <router-view />
+      </keep-alive>
     </q-page-container>
   </q-layout>
 </template>
 
 <script>
-import { date } from 'quasar';
-import { defineComponent, ref } from 'vue';
+import { date } from "quasar";
+import { defineComponent, ref } from "vue";
 
 export default defineComponent({
-  name: 'MainLayout',
+  name: "MainLayout",
 
   setup() {
     const leftDrawerOpen = ref(false);
@@ -91,7 +93,7 @@ export default defineComponent({
 
   computed: {
     todaysDate() {
-      return date.formatDate(Date.now(), 'dddd -  D MMM, YYYY');
+      return date.formatDate(Date.now(), "dddd -  D MMM, YYYY");
     },
   },
 });
