@@ -11,7 +11,7 @@
           @click="toggleLeftDrawer"
         />
       </q-toolbar>
-      <div class="q-px-lg q-pt-xl q-mb-md">
+      <div class="q-px-md q-mb-md">
         <div class="text-h3">Today</div>
         <div class="text-subtitle1">{{ todaysDate }}</div>
       </div>
@@ -22,12 +22,12 @@
       v-model="leftDrawerOpen"
       show-if-above
       :width="250"
-      :breakpoint="400"
+      :breakpoint="600"
     >
       <q-scroll-area
         style="
-          height: calc(100% - 150px);
-          margin-top: 150px;
+          height: calc(100% - 163px);
+          margin-top: 163px;
           border-right: 1px solid #ddd;
         "
       >
@@ -51,7 +51,7 @@
       <q-img
         class="absolute-top"
         src="~/assets/money.jpg"
-        style="height: 150px"
+        style="height: 163px"
       >
         <div class="absolute-bottom bg-transparent text-dark">
           <q-avatar size="56px" class="q-mb-sm">
