@@ -1,5 +1,6 @@
 {
   "name": "quasar-starter",
+  "version": "1.0",
   "description": "A Quasar CLI with Vite starter project.",
   "private": true,
   "scripts": {
