@@ -1,1 +1,7 @@
-/* Global CSS used within your BEX. This is not preprocessed so this has to be pure CSS. */
+/* from tutorial */
+p,
+span,
+code {
+  font-size: 21px !important;
+  line-height: 175% !important;
+}
