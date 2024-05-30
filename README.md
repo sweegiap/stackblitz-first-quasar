@@ -2,10 +2,14 @@
 
 My First Quasar Project on Stackblitz
 
-Following along the Quasar Video Tutorial:
-
-- https://www.youtube.com/watch?v=GV-D85D9KJQ
-- Stopped in this section: [Styling the Header](https://www.youtube.com/watch?v=GV-D85D9KJQ&t=498s)
+Steps:
+1. Created using Quasar starter from StackBlitz 
+2. Following along the Quasar Video Tutorial:
+   - https://www.youtube.com/watch?v=GV-D85D9KJQ
+3. Switch from StackBlitz to DevPod Devcontainer
+   - StackBlitz push to GitHub issues with email protection
+  
+TODO: Switch to Local Development + Quasar BEX of Todo
 
 ## Install the dependencies
 
