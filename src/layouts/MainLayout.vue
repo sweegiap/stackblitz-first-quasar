@@ -66,9 +66,20 @@
     </q-drawer>
 
     <q-page-container>
-      <keep-alive>
-        <router-view />
-      </keep-alive>
+      <router-view v-slot="{ Component }">
+        <keep-alive>
+          <component
+            :is="Component"
+            :key="$route.name"
+            v-if="!$q.platform.is.bex"
+          ></component>
+        </keep-alive>
+        <component
+          :is="Component"
+          v-if="$q.platform.is.bex"
+          :key="$route.name"
+        ></component>
+      </router-view>
     </q-page-container>
   </q-layout>
 </template>
